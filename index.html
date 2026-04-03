@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Responsive dashboard layout built with semantic HTML and Flexbox."
+  >
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__brand">
+      <h1 class="site-header__title">Dashboard</h1>
+    </div>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul class="site-nav__list">
+        <li><a href="#" class="site-nav__link">Home</a></li>
+        <li><a href="#" class="site-nav__link">Profile</a></li>
+        <li><a href="#" class="site-nav__link">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="dashboard">
+    <aside class="dashboard__sidebar" aria-label="Sidebar menu">
+      <nav class="sidebar-nav" aria-label="Sidebar navigation">
+        <ul class="sidebar-nav__list">
+          <li><a href="#" class="sidebar-nav__link">Menu 1</a></li>
+          <li><a href="#" class="sidebar-nav__link">Menu 2</a></li>
+          <li><a href="#" class="sidebar-nav__link">Menu 3</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="dashboard__main">
+      <section class="stats-section" aria-labelledby="stats-heading">
+        <h2 id="stats-heading" class="section-title">Overview</h2>
+
+        <div class="stats-grid">
+          <article class="stat-card">
+            <h3 class="stat-card__title">Users</h3>
+            <p class="stat-card__text">Track total active users.</p>
+          </article>
+
+          <article class="stat-card">
+            <h3 class="stat-card__title">Orders</h3>
+            <p class="stat-card__text">Monitor order activity.</p>
+          </article>
+
+          <article class="stat-card">
+            <h3 class="stat-card__title">Revenue</h3>
+            <p class="stat-card__text">Review current revenue insights.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="data-section" aria-labelledby="data-heading">
+        <h2 id="data-heading" class="section-title">Data Loader</h2>
+
+        <button type="button" class="action-button" onclick="loadData()">
+          Load Data
+        </button>
+
+        <div id="data" class="data-output" aria-live="polite"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
