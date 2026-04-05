@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta
-    name="description"
-    content="Responsive dashboard layout built with semantic HTML and Flexbox."
-  >
+  <meta name="description" content="Responsive dashboard layout built with semantic HTML and Flexbox.">
   <title>Dashboard</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <header class="site-header">
+    <!--applied style only on site-header but on justify-content:space-between it just made -->
+    <!-- the space between itscontent inside it  -->
     <div class="site-header__brand">
       <h1 class="site-header__title">Dashboard</h1>
     </div>
@@ -59,12 +60,8 @@
       </section>
 
       <section class="data-section" aria-labelledby="data-heading">
-        <h2 id="data-heading" class="section-title">Data Loader</h2>
-
-        <button type="button" class="action-button" onclick="loadData()">
-          Load Data
-        </button>
-
+        <h2 id="data-heading" class="section-title">Data Loader</h2>      
+        <button type="button" class="action-button" id="loadBtn" aria-label="Load data">Load Data</button>
         <div id="data" class="data-output" aria-live="polite"></div>
       </section>
     </main>
@@ -72,4 +69,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>
