@@ -1,0 +1,47 @@
+1. Layout Issues
+
+1.1. Faced difficulty between using align-items and align-content
+>
+1.2. Confusion between min-width and max-width
+>
+1.3. Why is `meta viewport` important
+> It ensures the layout scales correctly on mobile devices, making the UI responsive.
+1.4 difference between flex:1 and width 
+>
+
+2. What was the JavaScript bug?
+a scope/closure issue if a for loop used var to create asynchronous callbacks, causing all callbacks to reference the same index.
+
+3. why :
+The bug was due to var i inside a loop with setTimeout. Since var is function-scoped, all callbacks used the final value of i.
+Closures capture variables, not their values. When setTimeout runs, the loop has finished and i equals data.length
+
+I could have fixed it with let but i focused on finding if there is any other better approach since forEach is suitable
+and is a modern Javascript approah(Using .forEach() is the most robust way to handle this because it creates a
+new function scope for every single element in the array.)- I used this
+
+2. Learned about Why is `innerHTML +=` bad?
+Answer with key points: 
+- Re-renders entire DOM each time
+- Performance issue
+- Hard to maintain
+
+Better:
+createElement+appendChild
+It is perfectly fine to use innerHTML when you want to completely wipe a
+container or insert a simple, static string that you wrote yourself (not from an API),
+such as:
+
+dataOutput.innerHTML = ''; (To clear the list).
+dataOutput.innerHTML = '<p>Loading...</p>'; (A simple message).
+
+In your script.js, we used dataOutput.innerHTML = ''; once at the start to
+clear the "Loading" message, but then used document.createElement inside the
+loop for the actual user data to ensure the app remains fast, secure, and professional.
+
+
+
+3. What is a DocumentFragment and why use it?
+-It allows batching DOM updates and improves performance by reducing reflows.
+
+
