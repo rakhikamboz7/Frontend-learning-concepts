@@ -236,8 +236,8 @@ feature/dashboard-fix → main
 
 Submit:
 
-- GitHub Repository Link
-- Pull Request Link
+- GitHub Repository Link: https://github.com/rakhikamboz7/Frontend-learning-concepts
+- Pull Request Link: https://github.com/rakhikamboz7/Frontend-learning-concepts/pull/1
 - Screenshots:
     - Desktop view
     - Mobile view
